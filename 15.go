@@ -1,11 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func createHugeString(size int) string {
-	// Логика создания огромной строки
-	hugeString := "Huge String Content..."
-	return hugeString
+	str := strings.Repeat("a", size)
+	return str
 }
 
 // исправление заключается в том,
