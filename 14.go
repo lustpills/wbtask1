@@ -34,12 +34,14 @@ func main() {
 	checkType(c)
 
 	// Пример с использованием пакета reflect для определения типа переменной x
-	var x interface{} = "Test"
+	var x interface{} = make(chan int)
 	switch reflect.TypeOf(x).Kind() {
 	case reflect.Int:
 		fmt.Println("Переменная x - int")
 	case reflect.String:
 		fmt.Println("Переменная x - string")
+	case reflect.Chan:
+		fmt.Println("Переменная x - chan")
 	default:
 		fmt.Println("Неизвестный тип переменной x")
 	}

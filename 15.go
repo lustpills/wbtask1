@@ -8,6 +8,8 @@ func createHugeString(size int) string {
 	return hugeString
 }
 
+// исправление заключается в том,
+// что огромная строка не хранится в глобальной переменной
 func someFunc() string {
 	v := createHugeString(1 << 10)
 	return v[:100]
